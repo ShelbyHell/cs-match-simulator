@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOV1KUS APP 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" id="main-styles">
+</head>
+<body>
+    <div class="container">
+        <h1>LOV1KUS APP 2</h1>
+        
+        <div class="team-input">
+            <h2>Team 1</h2>
+            <label for="team1-name">Team Name:</label>
+            <input type="text" id="team1-name">
+            <label for="lineup-select-team1">Тип состава:</label>
+            <select id="lineup-select-team1" class="lineup-select">
+                <option value="classic">Классика</option>
+                <option value="igl-awp">Капитан-снайпер</option>
+                <option value="no-awp">Без снайпера</option>
+            </select>
+            <div id="team1-players">
+                <div class="player-input">
+                    <label>Sniper:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Captain:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Entry-Fragger:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Lurker:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Support Player:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+            </div>
+            <button id="export-team1">Export Team 1</button>
+            <input type="file" id="import-team1" accept=".json">
+        </div>
+        <div class="team-input">
+            <h2>Team 2</h2>
+            <label for="team2-name">Team Name:</label>
+            <input type="text" id="team2-name">
+            <label for="lineup-select-team2">Тип состава:</label>
+            <select id="lineup-select-team2" class="lineup-select">
+                <option value="classic">Классика</option>
+                <option value="igl-awp">Капитан-снайпер</option>
+                <option value="no-awp">Без снайпера</option>
+            </select>
+            <div id="team2-players">
+                <div class="player-input">
+                    <label>Sniper:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Captain:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Entry-Fragger:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Lurker:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+                <div class="player-input">
+                    <label>Support Player:</label>
+                    <input type="text" placeholder="Nickname">
+                    <input type="number" placeholder="Rating" min="0" max="2" step="0.01">
+                </div>
+            </div>
+            <button id="export-team2">Export Team 2</button>
+            <input type="file" id="import-team2" accept=".json">
+        </div>
+
+        <div class="controls">
+            <select id="series-type">
+                <option value="BO1">BO1</option>
+                <option value="BO3">BO3</option>
+                <option value="BO5">BO5</option>
+            </select>
+            <select id="map-select-mode">
+                <option value="manual">Manual</option>
+                <option value="random">Random</option>
+            </select>
+            <div id="map-selects"></div>
+            <button id="swap-teams">Swap Teams</button>
+            <button id="simulate">Летс го</button>
+        </div>
+
+        <div id="result"></div>
+        <div id="rounds"></div>
+        <div id="commentary-container"></div>
+        <div id="player-stats"></div>
+    </div>
+    <div id="map-stats"></div>
+    <script src="script.js"></script>
+</body>
+</html>

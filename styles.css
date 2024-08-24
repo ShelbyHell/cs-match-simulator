@@ -1,0 +1,263 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b2838;
+    color: #c7d5e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #2a475e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #66c0f4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(102, 192, 244, 0.5);
+}
+
+.team-input {
+    margin-bottom: 20px;
+    background-color: #1b2838;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #66c0f4;
+}
+
+input[type="text"], input[type="number"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2a475e;
+    color: #c7d5e0;
+    font-size: 1rem;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+    color: #66c0f4;
+}
+
+button, .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #66c0f4;
+    border: none;
+    border-radius: 5px;
+    color: #1b2838;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button:hover, .download-button:hover {
+    background-color: #417a9b;
+    transform: translateY(-2px);
+}
+
+button:active, .download-button:active {
+    transform: translateY(0);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #66c0f4;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.team-stats {
+    width: 45%;
+    min-width: 300px;
+    background-color: #1b2838;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.player-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #2a475e;
+}
+
+.player-stat:last-child {
+    border-bottom: none;
+}
+
+.player-stat span {
+    display: block;
+}
+
+#rounds {
+    margin-top: 20px;
+    background-color: #1b2838;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.round {
+    padding: 5px 0;
+    border-bottom: 1px solid #2a475e;
+}
+
+.round:last-child {
+    border-bottom: none;
+}
+
+.overtime-start {
+    font-weight: bold;
+    color: #66c0f4;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #66c0f4;
+    border-bottom: 2px solid #66c0f4;
+}
+
+.overtime {
+    background-color: rgba(102, 192, 244, 0.1);
+}
+
+#settings-panel {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    background-color: #2a475e;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#settings-panel label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#settings-panel input[type="range"] {
+    width: 100%;
+}
+
+#round-speed-value {
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+}
+
+#commentary-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1b2838;
+    border-radius: 5px;
+}
+
+.commentary {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #2a475e;
+    border-radius: 3px;
+    color: #66c0f4;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .team-input {
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="number"], select {
+        font-size: 0.9rem;
+    }
+
+    button, .download-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .team-stats {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    #rounds {
+        padding: 10px;
+    }
+
+    .round {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    button, .download-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #result {
+        font-size: 1.2rem;
+    }
+}
