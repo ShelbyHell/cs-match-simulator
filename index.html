@@ -1,26 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOV1KUS APP 2</title>
+    <title>CS Match Simulator</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" id="main-styles">
 </head>
 <body>
     <div class="container">
-        <h1>LOV1KUS APP 2</h1>
+        <h1>CS Match Simulator</h1>
         
         <div class="team-input">
             <h2>Team 1</h2>
             <label for="team1-name">Team Name:</label>
             <input type="text" id="team1-name">
-            <label for="lineup-select-team1">Тип состава:</label>
+            <label for="lineup-select-team1">Type:</label>
             <select id="lineup-select-team1" class="lineup-select">
-                <option value="classic">Классика</option>
-                <option value="igl-awp">Капитан-снайпер</option>
-                <option value="no-awp">Без снайпера</option>
+                <option value="classic">Classic</option>
+                <option value="igl-awp">IGL-AWP</option>
+                <option value="no-awp">NO AWP</option>
             </select>
             <div id="team1-players">
                 <div class="player-input">
@@ -56,11 +55,11 @@
             <h2>Team 2</h2>
             <label for="team2-name">Team Name:</label>
             <input type="text" id="team2-name">
-            <label for="lineup-select-team2">Тип состава:</label>
+            <label for="lineup-select-team2">Type:</label>
             <select id="lineup-select-team2" class="lineup-select">
-                <option value="classic">Классика</option>
-                <option value="igl-awp">Капитан-снайпер</option>
-                <option value="no-awp">Без снайпера</option>
+                <option value="classic">Classic</option>
+                <option value="igl-awp">IGL-AWP</option>
+                <option value="no-awp">NO AWP</option>
             </select>
             <div id="team2-players">
                 <div class="player-input">
@@ -95,9 +94,9 @@
 
         <div class="controls">
             <select id="series-type">
-                <option value="BO1">BO1</option>
-                <option value="BO3">BO3</option>
-                <option value="BO5">BO5</option>
+                <option value="BO1">Best Of 1</option>
+                <option value="BO3">Best Of 3</option>
+                <option value="BO5">Best Of 5</option>
             </select>
             <select id="map-select-mode">
                 <option value="manual">Manual</option>
@@ -105,7 +104,7 @@
             </select>
             <div id="map-selects"></div>
             <button id="swap-teams">Swap Teams</button>
-            <button id="simulate">Летс го</button>
+            <button id="simulate">Simulate</button>
         </div>
 
         <div id="result"></div>
@@ -114,6 +113,7 @@
         <div id="player-stats"></div>
     </div>
     <div id="map-stats"></div>
+	<div id="powered-by">Powered by CS Federation</div>
     <script src="script.js"></script>
 </body>
 </html>

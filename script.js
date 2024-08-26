@@ -630,10 +630,10 @@ function generateResultImage(winner, loser, winnerScore, loserScore, team1Player
     canvas.height = 450;
     const ctx = canvas.getContext('2d');
 
-    ctx.fillStyle = '#1b2838';
+    ctx.fillStyle = '#003300';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.strokeStyle = '#2a475e';
+    ctx.strokeStyle = '#006600';
     ctx.lineWidth = 2;
     const startY = 80;
     const lineHeight = 60;
@@ -645,13 +645,8 @@ function generateResultImage(winner, loser, winnerScore, loserScore, team1Player
         ctx.stroke();
     }
 
-    ctx.beginPath();
-    ctx.moveTo(canvas.width / 2, 0);
-    ctx.lineTo(canvas.width / 2, startY + 5 * lineHeight);
-    ctx.stroke();
-
-    ctx.fillStyle = '#66c0f4';
-    ctx.font = 'bold 24px Arial';
+    ctx.fillStyle = '#00FF00';
+    ctx.font = 'bold 24px "San Francisco"';
     ctx.textAlign = 'center';
 
     const team1Name = document.getElementById('team1-name').value;
@@ -667,16 +662,17 @@ function generateResultImage(winner, loser, winnerScore, loserScore, team1Player
         ctx.fillText(`${team2Name.toUpperCase()} (${team2Wins})`, 3 * canvas.width / 4, 40);
     }
 
-    ctx.font = '18px Arial';
+    ctx.font = '18px "San Francisco"';
     const statsDistanceFromCenter = 300;
     const verticalOffset = -37;
 
     function drawTeamStats(players, startX, isLeftTeam) {
         players.forEach((player, index) => {
             const y = startY + index * lineHeight + lineHeight / 2 + verticalOffset;
-            ctx.fillStyle = '#c7d5e0';
-            ctx.textAlign = isLeftTeam ? 'right' : 'left';ctx.fillText(player.nickname, isLeftTeam ? startX - statsDistanceFromCenter : startX + statsDistanceFromCenter, y);
-            ctx.fillStyle = '#66c0f4';
+            ctx.fillStyle = '#00FF00';
+            ctx.textAlign = isLeftTeam ? 'right' : 'left';
+            ctx.fillText(player.nickname, isLeftTeam ? startX - statsDistanceFromCenter : startX + statsDistanceFromCenter, y);
+            ctx.fillStyle = '#00FF00';
             ctx.textAlign = isLeftTeam ? 'left' : 'right';
             ctx.fillText(player.matchRating.toFixed(2), isLeftTeam ? startX - statsDistanceFromCenter + 40 : startX + statsDistanceFromCenter - 40, y);
         });
@@ -688,8 +684,8 @@ function generateResultImage(winner, loser, winnerScore, loserScore, team1Player
     const allPlayers = [...team1Players, ...team2Players];
     const mvp = allPlayers.reduce((max, player) => max.matchRating > player.matchRating ? max : player);
 
-    ctx.fillStyle = '#66c0f4';
-    ctx.font = '20px Arial';
+    ctx.fillStyle = '#00FF00';
+    ctx.font = '20px "San Francisco"';
     ctx.textAlign = 'center';
 
     let mapScoresText = mapScores.map((score, index) => {
