@@ -1,21 +1,23 @@
 const roleBonuses = {
-    'Sniper': 5,
-    'Captain': -3,
+    'Sniper': 0,
+    'Captain': 0,
     'IGL-AWP': 0,
-    'Entry-Fragger': 5,
-    'Entry-Fragger-2': 2,
-    'Lurker': -1,
-    'Support Player': -2
+    'Entry-Fragger': 0,
+    'Entry-Fragger-2': 0,
+    'Lurker': 0,
+    'Support Player': 0
 };
 
 const mapBonuses = {
-    'Mirage': 2,
-    'Dust 2': -2,
-    'Train': 2,
-    'Overpass': 1,
-    'Anubis': -3,
-    'Nuke': 2,
-    'Ancient': 3
+    'Mirage': 0,
+    'Dust 2': 0,
+    'Train': 0,
+    'Overpass': 0,
+    'Anubis': 0,
+    'Nuke': 0,
+    'Ancient': 0,
+	'Cache': 0,
+	'Cobblestone': 0
 };
 
 const ratingRanges = {
